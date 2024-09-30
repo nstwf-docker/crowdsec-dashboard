@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKER_IMAGE_PATH: nstwf/crowdsec-dahboard
-      VERSION: latest
 
     services:
       docker:
