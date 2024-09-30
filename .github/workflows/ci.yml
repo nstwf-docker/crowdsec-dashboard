@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE_PATH: nstwf/crowdsec-dashboard
+      DOCKER_IMAGE_PATH: nstwf/crowdsec-dahboard
       VERSION: latest
 
     services:
@@ -32,5 +32,5 @@ jobs:
 
       - name: Build and push Docker images
         run: |
-          docker build -t ${{ env.DOCKER_IMAGE_PATH }}:${{ env.VERSION }} --build-arg VERSION=${{ env.VERSION }} .
-          docker push ${{ env.DOCKER_IMAGE_PATH }}:${{ env.VERSION }}
+          docker build -t ${{ env.DOCKER_IMAGE_PATH }}:latest .
+          docker push ${{ env.DOCKER_IMAGE_PATH }}:latest
